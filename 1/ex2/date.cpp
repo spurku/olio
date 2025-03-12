@@ -50,7 +50,6 @@ void Date::printDate() {
 }
 
 void Date::printDate(string format) {
-    // Implement custom format printing if needed
 }
 
 void Date::askDate() {
@@ -64,7 +63,7 @@ void Date::askDate() {
 
 void Date::addOneDay() {
     date++;
-    if (date > 30) { // Simplified month length handling
+    if (date > 30) {
         date = 1;
         month++;
         if (month > 12) {
