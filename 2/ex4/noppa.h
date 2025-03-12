@@ -1,20 +1,24 @@
-#ifndef NOPPA_h
-#define NOPPA_h
+#ifndef NOPPA_H
+#define NOPPA_H
+
 #include <iostream>
-#include <string>
-#include <cstdlib>
-#include <ctime>
+#include <vector>
 using namespace std;
 
 class Cube {
-    private:
-        int latestThrow;
-    public:
-        Cube();
-        ~Cube();
-        
-        int throwCube();
-        void showLatestThrow();
+private:
+    int numDice;
+    vector<int> latestThrows;
+
+public:
+    Cube(); // Default constructor
+    Cube(int numDice); // Parameterized constructor
+    ~Cube();
+
+    void setNumDice(int numDice);
+    int getNumDice();
+    void throwCube();
+    void showLatestThrow();
 };
 
 #endif

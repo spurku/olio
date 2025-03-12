@@ -10,26 +10,27 @@ int main () {
 
     setlocale(LC_ALL, "fi_FI");
 
-    std::cout << "Choose game: \n 1. monopoly (2 dices) \n2 - Yatzy (5 dices)"  << std::endl;
-    std::cin >> gameChoice;
+    int gameChoice;
+    cout << "Choose a game: 1. Monopoly 2. Yatzy" << endl;
+    cin >> gameChoice;
 
     if (gameChoice == 1) {
-        cube monopoly(2)
+        Cube monopoly(2);
         monopoly.throwCube();
         monopoly.showLatestThrow();
     }
     else if (gameChoice == 2) {
-        cube yatzy(5)
+        Cube yatzy(5);
         yatzy.throwCube();
         yatzy.showLatestThrow();
-        std::cout << result 
+        std::cout << "results"; 
     }
         
     srand(time(0));
 
     Cube Noppa;
     
-    int latestThrow = Noppa.throwCube();
+    Noppa.throwCube();
     Noppa.showLatestThrow();
     
     return 0;
