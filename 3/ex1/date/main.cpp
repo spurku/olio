@@ -4,7 +4,6 @@ int main() {
     Date date1;
 
     date1.askDate();
-
     
     date1.printDate();
 

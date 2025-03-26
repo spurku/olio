@@ -12,6 +12,8 @@ private:
     int year;
 
 public:
+    Date(); 
+
     // Setters
     void setDay(int newDay);
     void setMonth(int newMonth);
@@ -26,7 +28,7 @@ public:
     void printDate();  
     void printDate(string format);  
 
-    // Other 
+    // Other
     void askDate();
     void addOneDay();
 
@@ -35,4 +37,4 @@ private:
     int daysInMonth(int month, int year);  
 };
 
-#endif  
+#endif
