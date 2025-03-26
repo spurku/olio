@@ -1,26 +1,30 @@
 #include "person.h"
 #include <iostream>
-#include <string>
-using namespace std;
+
+Person::Person() : name("Unnamed"), age(0) {} 
+
+Person::Person(std::string n, int a) : name(n), age(a) {} 
+
+Person::~Person() {
+    std::cout << "Destructor called for " << name << std::endl;
+}
 
 void Person::salute() {
-    cout << "Hello, my name is " << name << " and I am " << age << " years old." << endl;
+    std::cout << "Hello, my name is " << name << " and I am " << age << " years old." << std::endl;
 }
 
 void Person::setAge(int newAge) {
-    if (newAge >= 0) {
-        age = newAge;
-    }
+    if (newAge >= 0) age = newAge;
 }
 
 int Person::getAge() {
     return age;
 }
 
-void Person::setName(string newName) {
+void Person::setName(std::string newName) {
     name = newName;
 }
 
-string Person::getName() {
+std::string Person::getName() {
     return name;
 }

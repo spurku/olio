@@ -8,6 +8,7 @@ class Person {
 public:
     Person(); 
     Person(std::string name, int age);
+    ~Person();  // Destructor declaration
 
     void setName(std::string name);
     void setAge(int age);
@@ -16,6 +17,7 @@ public:
     int getAge() const;          
 
     void printDetails() const;  
+    void salute() const;        
 
 private:
     std::string name;

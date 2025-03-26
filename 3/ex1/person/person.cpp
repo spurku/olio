@@ -1,38 +1,16 @@
 #include "Person.h"
 #include <iostream>
 
-using namespace std;
+// Default const
+Person::Person() : name(""), age(0) {}
 
-class Person {
-private:
-    string name;     int age;     
-
-public:
-    Person();
-    Person(string name, int age);
-    ~Person();
-
-    void setName(string name);
-    void setAge(int age);
-    string getName() const;
-    int getAge() const;
-    void printPersonDetails() const;
-    void salute() const; 
-};
-
-Person::Person() : name(""), age(0) {
-    cout << "Person class default constructor" << endl;
-}
-
-Person::Person(string name, int age) : name(name), age(age) {
-    cout << "Person class parameterized constructor" << endl;
-}
+Person::Person(std::string name, int age) : name(name), age(age) {}
 
 Person::~Person() {
-    cout << "Person class destructor for " << name << endl;
+    std::cout << "Person class destructor for " << name << std::endl;
 }
 
-void Person::setName(string name) {
+void Person::setName(std::string name) {
     this->name = name;
 }
 
@@ -40,18 +18,18 @@ void Person::setAge(int age) {
     this->age = age;
 }
 
-string Person::getName() const { 
+std::string Person::getName() const {
     return name;
-}
+} 
 
-int Person::getAge() const { 
+int Person::getAge() const {
     return age;
 }
 
-void Person::salute() const { 
-    cout << "Hello, my name is " << name << " and I am " << age << " years old." << endl;
+void Person::printDetails() const {
+    std::cout << "Name: " << name << ", Age: " << age << std::endl;
 }
 
-void Person::printPersonDetails() const { 
-    cout << "Name: " << name << ", Age: " << age << endl;
+void Person::salute() const {
+    std::cout << "Hello, my name is " << name << " and I am " << age << " years old." << std::endl;
 }
