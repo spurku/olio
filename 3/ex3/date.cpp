@@ -40,12 +40,12 @@ void Date::setYear(int y) {
     year = y;
 }
 
-// Method to print the date in "DD/MM/YYYY" format
+
 void Date::printDate() const {
     cout << day << "/" << month << "/" << year << endl;
 }
 
-// Method to ask the user for a date input
+
 void Date::askDate() {
     cout << "Enter day: ";
     cin >> day;

@@ -2,7 +2,7 @@
 
 // Default constructor
 CalendarEntry::CalendarEntry() {
-    date = Date(); // Uses the default constructor of the Date class
+    date = Date(); 
     subject = "Not defined";
     reminder = false;
 }
@@ -58,7 +58,7 @@ void CalendarEntry::askDetails() {
     cout << "Enter the calendar entry date: " << endl;
     date.askDate();
     cout << "Enter the subject of the entry: ";
-    cin.ignore(); // Clears the input buffer
+    cin.ignore(); // Clears the input 
     getline(cin, subject);
     char reminderChoice;
     cout << "Is the reminder on? (y/n): ";

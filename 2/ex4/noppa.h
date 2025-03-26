@@ -11,8 +11,8 @@ private:
     vector<int> latestThrows;
 
 public:
-    Cube(); // Default constructor
-    Cube(int numDice); // Parameterized constructor
+    Cube(); // Default const
+    Cube(int numDice); 
     ~Cube();
 
     void setNumDice(int numDice);

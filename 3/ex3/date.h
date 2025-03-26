@@ -22,15 +22,13 @@ public:
     int getMonth() const;
     int getYear() const;
 
-    // Setter methods
     void setDay(int d);
     void setMonth(int m);
     void setYear(int y);
 
-    // Method to print the date in "DD/MM/YYYY" format
     void printDate() const;
 
-    // Method to ask the user for a date input
+    
     void askDate();
 };
 
