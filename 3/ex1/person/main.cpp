@@ -1,43 +1,39 @@
 #include <iostream>
-#include <string>
-#include "person.h"
+#include "Person.h"
+
 using namespace std;
 
 void createPerson() {
     Person tempPerson("Temporary", 30);
-    tempPerson.printPersonDetails();
+    tempPerson.printDetails();
 }
 
-int main(){
-    
-    setlocale(LC_ALL,"fi_FI");
-
+int main() {
     cout << "Creating person at the beginning of main" << endl;
-    Person Kalle;
-    Kalle.setName("Kalle");
-    Kalle.setAge(20);
+    Person kalle;
+    kalle.setName("Kalle");
+    kalle.setAge(20);
+    kalle.printDetails();
 
     cout << "Creating person inside if block" << endl;
     if (true) {
-        Person Ville;
-        Ville.setName("Ville");
-        Ville.setAge(23);
-        Ville.salute();
-    }
+        Person ville("Ville", 23);
+        ville.printDetails();
+    } 
 
     cout << "Creating person inside for loop" << endl;
-    for (int i = 0; i < 2; i++){
+    for (int i = 0; i < 2; i++) {
         Person tempPerson("Jalmari", i + 20);
-        tempPerson.printPersonDetails();
-    }
+        tempPerson.printDetails();
+    } 
 
     cout << "Creating person inside a function" << endl;
     createPerson();
 
     cout << "Creating dynamic person" << endl;
-    Person* pekka = new Person("Pekka", 20);
-    pekka->printPersonDetails();
-    delete pekka;
+    Person* pekka = new Person("Pekka", 25);
+    pekka->printDetails();
+    delete pekka; 
 
     cout << "End of main" << endl;
 
