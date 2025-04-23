@@ -16,7 +16,7 @@ int main() {
     CalendarEntry entry2 = entry1;  //copyu constructor
     
     cout << "\nCopied Entry:" << endl;
-    entry2.printEntry();  // Näyttää uuden kopion tiedot
+    entry2.printEntry();  
 
     return 0;
 }
